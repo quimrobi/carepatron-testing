@@ -2,22 +2,20 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
-import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+
+import CarePatronLogo from "../logo.svg";
 
 export const Navigation = () => {
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
+    <>
+      <AppBar component="nav" position="relative">
         <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: "flex" }}
-          >
-            CarePatron
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: "flex" }}>
+            <img src={CarePatronLogo} />
+          </Box>
           <Box>
             <Link to="/">
               <Button sx={{ color: "#fff" }}>Home</Button>
@@ -28,10 +26,10 @@ export const Navigation = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="main" sx={{ p: 5, width: "100%" }}>
-        <Toolbar />
+
+      <Container maxWidth="md" sx={{ padding: 4 }}>
         <Outlet />
-      </Box>
-    </Box>
+      </Container>
+    </>
   );
 };
