@@ -8,14 +8,14 @@ export const Home = () => {
   return (
     <Box>
       <Typography
-        variant="h3"
+        variant="h4"
         component="div"
-        sx={{ textAlign: "center", color: "#212121" }}
+        sx={{ textAlign: "center", paddingX: 20 }}
       >
-        Welcome to CarePatron!
+        The Healthcare Platform you and your clients will love
       </Typography>
       <Link to="/clients">
-        <Button variant="contained" sx={{ mt: 2 }}>
+        <Button variant="contained" sx={{ mt: 3 }}>
           View Client List
         </Button>
       </Link>

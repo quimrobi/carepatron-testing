@@ -1,8 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Clients } from "./pages/Clients";
-import { Home } from "./pages/Home";
+
+import { Clients } from "./containers/Clients";
+import { Home } from "./containers/Home";
 import { Navigation } from "./components/Navigation";
+
 import "./App.css";
 
 function App() {
