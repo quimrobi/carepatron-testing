@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
@@ -11,7 +10,7 @@ import CarePatronLogo from "../logo.svg";
 export const Navigation = () => {
   return (
     <>
-      <AppBar component="nav" position="relative">
+      <AppBar component="nav" sx={{ position: "relative" }}>
         <Toolbar>
           <Box sx={{ flexGrow: 1, display: "flex" }}>
             <img src={CarePatronLogo} />
